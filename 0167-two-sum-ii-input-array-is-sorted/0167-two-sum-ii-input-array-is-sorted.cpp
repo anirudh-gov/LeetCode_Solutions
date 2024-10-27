@@ -8,7 +8,7 @@ public:
             if(sum==target){
                 v.push_back(ptr1+1);
                 v.push_back(ptr2+1);
-                return v;
+                break;
             }else if(sum<target){
                 ptr1++;
             }else{
