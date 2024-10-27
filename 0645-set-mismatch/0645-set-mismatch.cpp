@@ -1,18 +1,20 @@
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
-        sort(nums.begin(),nums.end());
         int n = nums.size();
-        int rep,f=0,sum=nums[n-1];
-        for(int i = 0; i < n-1; i++){
-            if(nums[i]==nums[i+1] && f!=1){
-                rep=nums[i];
-                f=1;
-            }
-            sum+=nums[i];
+        vector<int> cnt(n, 0);
+        int r,l;
+        
+        for (int num :nums) {
+            cnt[num - 1]++;
         }
 
-
-        return {rep,((n*(n+1))/2)-(sum-rep)};
+        for (int i = 0; i < n; ++i) {
+            if (cnt[i] == 0) 
+                l = i + 1;
+            if (cnt[i] == 2)
+                r = i + 1;
+        }
+        return {r, l};
     }
 };
