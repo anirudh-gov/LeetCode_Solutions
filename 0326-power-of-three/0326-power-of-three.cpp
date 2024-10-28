@@ -1,9 +1,9 @@
 class Solution {
 public:
     bool isPowerOfThree(int n) {
-        int i;
+        ios_base::sync_with_stdio(false);
         long long w=1;
-        for(i=0;i<=20;i++){
+        for(int i=0;i<=20;i++){
             if(w==n){
                 return true;
             }
