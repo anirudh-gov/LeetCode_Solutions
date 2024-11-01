@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isGood(vector<int>& nums) {
-        ios_base::sync_with_stdio(false);
+        // ios_base::sync_with_stdio(false);
         int n = nums.size();
         vector<int> v(n, 0);
 
