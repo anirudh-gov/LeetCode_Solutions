@@ -22,6 +22,7 @@ public:
     }
 
     string longestPalindrome(string s) {
+        ios_base::sync_with_stdio(false);
         int n = s.length();
         if (n == 0) return "";
 
