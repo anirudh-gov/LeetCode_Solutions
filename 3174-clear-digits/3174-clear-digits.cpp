@@ -13,10 +13,10 @@ public:
         }
         string res = "";
         while(!stk.empty()){
-            res=stk.top()+res;
+            res+=stk.top();
             stk.pop();
         }
-
+        reverse(res.begin(),res.end());
         return res;
     }
 };
