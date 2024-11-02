@@ -1,6 +1,8 @@
 class Solution {
 public:
     string clearDigits(string s) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
         if(s.length()==1) return s;
         stack<char> stk;
         for(int i=0;i<(int)s.length();i++){
