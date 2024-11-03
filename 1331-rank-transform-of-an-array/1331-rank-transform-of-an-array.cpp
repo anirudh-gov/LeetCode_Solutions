@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<int> arrayRankTransform(vector<int>& arr) {
+        ios_base::sync_with_stdio(false);
         vector<int> sortedArr = arr;
         sort(sortedArr.begin(), sortedArr.end());
         unordered_map<int, int> rankMap;
