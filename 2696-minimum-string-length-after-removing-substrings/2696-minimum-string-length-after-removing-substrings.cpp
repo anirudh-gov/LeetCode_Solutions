@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minLength(string s) {
+        ios_base::sync_with_stdio(false);
         if(s.length()<=1) return 1;
         stack<char> stk;
         stk.push(s[0]);
