@@ -1,6 +1,7 @@
 class Solution {
 public:
     string compressedString(string word) {
+        ios_base::sync_with_stdio(false);
         string ans = "";
         stack<char> stk;
         int c = 1;
