@@ -2,20 +2,22 @@ class Solution {
 public:
     vector<int> sortByBits(vector<int>& arr) {
         
-        map<int,vector<int>> mp;
+        vector<int> countBits[33];
         
-        for(int n:arr){
-            mp[__builtin_popcount(n)].push_back(n);
+        for (int n : arr) {
+            countBits[__builtin_popcount(n)].push_back(n);
         }
         
-        vector<int> ans;
+        vector<int> result;
         
-        for(auto& p:mp){
-            sort(p.second.begin(),p.second.end());
-            ans.insert(ans.end(),p.second.begin(),p.second.end());
+        for (int i = 0; i < 33; ++i) {
+            if (!countBits[i].empty()) {
+                sort(countBits[i].begin(), countBits[i].end());
+                result.insert(result.end(), countBits[i].begin(), countBits[i].end());
+            }
         }
 
-        return ans;
+        return result;
 
     }
 };
