@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool canSortArray(vector<int>& nums) {
-
+        ios_base::sync_with_stdio(false);
         int n=nums.size();
         for(int i=1;i<n;++i){
             for(int j=0;j<n-i;++j){
