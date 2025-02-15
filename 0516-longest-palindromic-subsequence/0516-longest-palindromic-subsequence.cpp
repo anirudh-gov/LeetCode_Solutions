@@ -3,7 +3,8 @@ class Solution {
 public:
 
   int longestPalindromeSubseq(string s) {
-
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n=s.size();
     vector<vector<int>>dp(n+1,vector<int>(n+1,0));
     string t=s;
