@@ -5,8 +5,6 @@ public:
         int n=nums.size();
         int i =0,j=(n+1)/2,c=0;
 
-        vector<bool> v(n,false);
-
         while(i<(n+1)/2&&j<n){
             if(2*nums[i]<= nums[j]){
                 c+=2;
